@@ -1,0 +1,14 @@
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\bin\Debug\variablesConstantes.exe.config
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\bin\Debug\variablesConstantes.exe
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\bin\Debug\variablesConstantes.pdb
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.csprojAssemblyReference.cache
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.csproj.CoreCompileInputs.cache
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.exe
+C:\Users\Estudiantes\Desktop\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.pdb
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\bin\Debug\variablesConstantes.exe.config
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\bin\Debug\variablesConstantes.exe
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\bin\Debug\variablesConstantes.pdb
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.csprojAssemblyReference.cache
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.exe
+C:\Users\david\OneDrive\Escritorio\Proyectos\variablesConstantes\variablesConstantes\obj\Debug\variablesConstantes.pdb
