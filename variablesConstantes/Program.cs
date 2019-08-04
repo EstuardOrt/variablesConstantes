@@ -8,6 +8,8 @@ namespace variablesConstantes
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             //SumaYPromedio();
@@ -22,6 +24,8 @@ namespace variablesConstantes
             ImprimirTexto("Si desea calcular la hipotenusa ingrese 1");
             ImprimirTexto("Si desea calcular el cateto opuesto ingrese 2");
             ImprimirTexto("Si desea calcular el cateto adyacente ingrese 3");
+            ImprimirTexto("Para Salir ingrese 4");
+
             pitagoras(int.Parse(Console.ReadLine()));
         }
 
@@ -66,17 +70,23 @@ namespace variablesConstantes
 
         static void pitagoras(int comando)
         {
-            double hipotenusa, cateto1, cateto2;
+            double hipotenusa, catetoO, catetoA;
+            Stack<double> opuesto = new Stack<double>();
 
             if (comando == 1 )
             {
-                ImprimirTexto("Ingrese el primer cateto: ");
-                cateto1 = double.Parse(Console.ReadLine());
-                ImprimirTexto("Ingrese el segundo cateto: ");
-                cateto2 = double.Parse(Console.ReadLine());
+                ImprimirTexto("Ingrese el cateto opuesto: ");
+                catetoO = double.Parse(Console.ReadLine());
+                ImprimirTexto("Ingrese el cateto adyacente: ");
+                catetoA = double.Parse(Console.ReadLine());
                 
-                hipotenusa = Math.Sqrt(Math.Pow(cateto1,2)+Math.Pow(cateto2,2));
+                hipotenusa = Math.Sqrt(Math.Pow(catetoO,2)+Math.Pow(catetoA,2));
+
+                GuardarDatos(catetoO, catetoA, hipotenusa);
+
                 ImprimirTexto("La hipotenusa es de: " + hipotenusa);
+                Console.ReadKey();
+                menuTeoremaDePitagoras();
             }
             else if (comando == 2)
             {
@@ -84,11 +94,14 @@ namespace variablesConstantes
                 ImprimirTexto("Ingrese la hipotenusa: ");
                 hipotenusa = double.Parse(Console.ReadLine());
                 ImprimirTexto("Ingrese el cateto adyacente: ");
-                cateto1 = double.Parse(Console.ReadLine());
-                if (cateto1 < hipotenusa)
+                catetoA = double.Parse(Console.ReadLine());
+                if (catetoA < hipotenusa)
                 {
-                    cateto2 = Math.Sqrt(Math.Pow(hipotenusa, 2) - Math.Pow(cateto1, 2));
-                    ImprimirTexto("El valor del cateto opuesto es de: " + cateto2);
+                    catetoO = Math.Sqrt(Math.Pow(hipotenusa, 2) - Math.Pow(catetoA, 2));
+                    GuardarDatos(catetoO, catetoA, hipotenusa);
+                    ImprimirTexto("El valor del cateto opuesto es de: " + catetoO);
+                    Console.ReadKey();
+                    menuTeoremaDePitagoras();
                 }
                 else
                 {
@@ -101,11 +114,14 @@ namespace variablesConstantes
                 ImprimirTexto("Ingrese la hipotenusa: ");
                 hipotenusa = double.Parse(Console.ReadLine());
                 ImprimirTexto("Ingrese el cateto opuesto: ");
-                cateto2 = double.Parse(Console.ReadLine());
-                if (cateto2 < hipotenusa)
+                catetoO = double.Parse(Console.ReadLine());
+                if (catetoO < hipotenusa)
                 {
-                    cateto1 = Math.Sqrt(Math.Pow(hipotenusa, 2) - Math.Pow(cateto2, 2));
-                    ImprimirTexto("El valor del cateto adyacente es de: " + cateto1);
+                    catetoA = Math.Sqrt(Math.Pow(hipotenusa, 2) - Math.Pow(catetoO, 2));
+                    GuardarDatos(catetoO, catetoA, hipotenusa);
+                    ImprimirTexto("El valor del cateto adyacente es de: " + catetoA);
+                    Console.ReadKey();
+                    menuTeoremaDePitagoras();
                 }
                 else
                 {
@@ -114,14 +130,35 @@ namespace variablesConstantes
                     menuTeoremaDePitagoras();
                 }
             }
+            else if (comando == 4)
+            {
+                Environment.Exit(0);
+            }
             else
             {
                 ImprimirTexto("Ingrese un comando valido");
                 Console.ReadKey();
                 menuTeoremaDePitagoras();
             }
+
             
 
+        }
+
+        static void GuardarDatos(double catetoOp, double catetoAd, double hipotenusa)
+        {
+            Stack<double> opuesto = new Stack<double>();
+            Queue<double> adyacente = new Queue<double>();
+            List<double> hipo = new List<double>();
+            List<object> guardar = new List<object>();
+
+            opuesto.Push(catetoOp);
+            adyacente.Enqueue(catetoAd);
+            hipo.Add(hipotenusa);
+
+            guardar.Add(opuesto);
+            guardar.Add(adyacente);
+            guardar.Add(hipo);
         }
     }
 }
