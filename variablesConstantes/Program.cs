@@ -159,6 +159,8 @@ namespace variablesConstantes
             guardar.Add(opuesto);
             guardar.Add(adyacente);
             guardar.Add(hipo);
+
+            
         }
     }
 }
